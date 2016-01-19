@@ -1,0 +1,55 @@
+header {
+  @media only screen and (min-device-width: 768px) {
+    .row {
+      .col {
+        &.logo,
+        &.adress,
+        &.schedule,
+        &.phone,
+        &.btn-order {
+          width: auto;
+          float: none;
+          padding: 0;
+          width: 33%;
+          margin: 0;
+          display: inline-block;
+          vertical-align: middle;
+        }
+        
+        &.logo {
+          a.l {
+            width: 100%;
+          }
+          a.menu {
+            display: none;
+          }
+          &:after {
+            display: none;
+          }
+        }
+        
+        &.adress {
+          i.mark-icon {
+            margin-right: 0;
+          }
+        }
+        &.schedule {
+          i.clock-icon {
+            margin-right: 0;
+          }
+        }
+        
+        &.phone,
+        &.btn-order {
+          margin-top: 20px;
+          width: 45%;
+        }
+        
+        &.btn-order {
+          padding: 5px 15px;
+        }
+        
+      }
+    }
+  }
+}

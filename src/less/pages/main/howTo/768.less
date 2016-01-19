@@ -1,0 +1,78 @@
+section.how-to {
+  
+  @media only screen and (min-device-width: 768px) {
+   
+    .row {
+      margin: 6rem 0;
+      font-size: 0;
+      .col {
+        display: inline-block;
+        vertical-align: middle;
+        width: 50%;
+        &.img {
+          position: relative;
+          width: 40%;
+          display: inline-block;
+          img {
+            position: absolute;
+            width: 130%;
+            padding: 1rem;
+            box-sizing: border-box;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+            &.left {
+              left: 0;
+            }
+            &.right {
+              right: 0;
+            }
+          }
+        }
+        
+        &.list {
+          width: 60%;
+          .ul-wrapper {
+            text-align: center;
+            border: 1px solid @orange;
+            &.left {
+              margin: 0 3rem 0 6rem;
+              padding: 3rem 3rem 2rem 0;
+            }
+            &.right {
+              margin: 0 6rem 0 3rem;
+              padding: 3rem 0 2rem 3rem;
+            }
+            h3 {
+              font-size: 1.5rem;
+              color: @green;
+              margin-bottom: 1rem;
+            }
+            ul {
+              
+              li {
+                span {
+                  font-size: 1.4rem;
+                  color: @green;
+                  line-height: 1.5rem;
+                  margin: 1rem 0;
+                }
+                i {
+                  width: 2.5rem;
+                  height: 2.5rem;
+                  margin-right: 1rem;
+                }
+              }
+            }
+          }
+        }
+        
+        
+      }
+      
+      &:after {
+        .clear;
+      }
+    }
+  }
+}

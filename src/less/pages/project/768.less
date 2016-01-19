@@ -1,0 +1,110 @@
+section.project {
+  @media only screen and (min-device-width: 768px) {
+    width: 100%;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    overflow: hidden;
+    .row {
+      font-size: 0;
+      width: 115rem;
+      .col {
+      
+        width: 35rem;
+        
+      
+        &.description {
+          border: 1px solid @green;
+          box-sizing: border-box;
+          padding: 0 2rem 2rem 2rem;
+          margin: 2rem 0 0 2rem;
+          height: 23rem;
+          h2 {
+            text-align: left;
+          }
+          p {
+            color: @green;
+            font-size: 1.3rem;
+          }
+          
+        }
+        
+        &.image {
+          margin: 2rem 0 0 3rem; 
+          text-align: right;
+          .img {
+            border: 1px solid @green;
+            box-sizing: border-box;
+            height: 23rem;
+            overflow: hidden;
+            width: 100%;
+            img {
+              width: 100%;
+            }
+          }
+          .btn {
+          margin-top: 2rem;
+            display: inline-block;
+            height: 4rem;
+            width: 16rem;
+            background: @green;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: left;
+            overflow: hidden;
+            i {
+              display: inline-block;
+              height: 4rem;
+              width: 2rem;
+              margin-left: 1rem;
+              margin-right: 1rem;
+              vertical-align: middle;
+              &.arrowRight-icon {
+                background: url("@{IMG_PATH}project/arrow.png") no-repeat center;
+                background-size: 100%;
+              }
+              &.arrowLeft-icon {
+                background: url("@{IMG_PATH}project/arrow2.png") no-repeat center;
+                background-size: 100%;
+              }
+            }
+            span {
+              color: white;
+              display: inline-block;
+              width: 100%;
+              font-size: 1.5rem;
+              height: 100%;
+              line-height: 4rem;
+              padding: 0 1rem;
+              overflow: hidden;
+            }
+          }
+        }
+        
+        &.params {
+          margin-left: 3rem;
+          margin-right: 2rem;
+          table {
+            thead {
+              tr {
+                th {
+                  font-size: 1.5rem;
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  font-size: 1.2rem;
+                }
+              }
+            }
+          }
+        }
+      
+      }
+      
+    }
+  }
+}

@@ -1,0 +1,37 @@
+header {
+  @media only screen and (min-device-width: 568px) {
+    .row {
+      text-align: center;
+      .col {
+        &.adress,
+        &.schedule,
+        &.phone, 
+        &.btn-order {
+          display: inline-block;
+          float: none;
+          width: 47%;
+          margin: 30px 0;
+        }
+        &.logo {
+          
+        }
+        &.phone {
+          font-size: 28px;
+          &:after {
+            display: none;
+          }
+        }
+        &.btn-order {
+          box-sizing: border-box;
+          margin: 0;
+          &:after {
+            display: none;
+          }
+        }
+      }
+      &:after {
+        .clear;
+      }
+    }
+  }
+}

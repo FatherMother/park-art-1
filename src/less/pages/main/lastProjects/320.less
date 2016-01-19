@@ -1,0 +1,61 @@
+section.last-project {
+  width: 100%;
+  text-align: center;
+  ul {
+    list-style-type: none;
+    li {
+      vertical-align: top;
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 2rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        .clearLink;
+        display: block;
+        text-align: center;
+        img {
+          width: 80%;
+          max-width: 500px;
+        }
+        
+        h3 {
+          font-size: 1rem;
+          margin: .5rem 0 0;
+        }
+          
+        p {
+          font-size: .8rem;
+          padding: .5rem 0;
+          width: 80%;
+          max-width: 500px;
+          margin: auto;
+        }
+        
+      }
+    
+    }
+  }
+  a.btn {
+    display: inline-block;
+    text-align: center;
+    margin: 1rem auto;
+    .clearLink;
+    color: @green;
+    &:active,
+    &:visited,
+    &:focus {
+      color: @green;
+    }
+    border: 2px solid @green;
+    font-size: 1rem;
+    width: auto;
+    padding: 5px 15px;
+    .tran;
+    &:hover {
+      background-color: @green;
+      color: white;
+    }
+  }
+}

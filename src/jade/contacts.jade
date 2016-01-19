@@ -1,0 +1,53 @@
+include commons/doctype.jade
+html
+  include commons/head.jade
+  body
+    include commons/header.jade
+    include commons/nav.jade
+    include commons/h1.jade
+
+    include commons/breadCrumbs.jade
+
+    section.adress-map
+      .row
+        .col.adress
+          .item
+            ul
+              li
+                img(src="#{CONTACTS}photo_001.jpg")
+                img.mobile(src="#{CONTACTS}photo_002.jpg")
+              li: p Адресс такой то такой то <br>телефон такой то такой то
+            p Офисс на 1 Посадской
+          .item.active
+            ul
+              li
+                img(src="#{CONTACTS}photo_003.jpg")
+                img.mobile(src="#{CONTACTS}photo_004.jpg")
+              li: p Адресс такой то такой то <br>телефон такой то такой то
+            p Офисс на Городской
+        .col.ma
+          .map#map
+            script(type="text/javascript", charset="utf-8", src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=T-V82P5kHyChfnDOZqbsyuZz1ePkfpME&lang=ru_RU&sourceType=constructor")
+    
+    section.employers
+      h2
+        span Наши сотрудники
+      ul.list
+        li
+          img(src="#{CONTACTS}photo_005.jpg")
+          p.name Иван Петрович
+          p.status Сварщик
+        li
+          img(src="#{CONTACTS}photo_005.jpg")
+          p.name Иван Петрович
+          p.status Сварщик
+        li
+          img(src="#{CONTACTS}photo_005.jpg")
+          p.name Иван Петрович
+          p.status Сварщик
+        li
+          img(src="#{CONTACTS}photo_005.jpg")
+          p.name Иван Петрович
+          p.status Сварщик
+
+    include commons/footer.jade

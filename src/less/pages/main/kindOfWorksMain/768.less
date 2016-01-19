@@ -1,0 +1,56 @@
+section.kind-of-works-main {
+  @media only screen and (min-device-width: 768px) {
+    margin-bottom: 5rem;
+    ul {
+      max-width: 1024px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      li {
+        max-width: 35rem;
+        margin: 1rem;
+        position: relative;
+        min-height: 25rem;
+        overflow: hidden;
+        h3 {
+          font-size: 1.4rem;
+          position: relative;
+          z-index: 2;
+        }
+        img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 1;
+          height: 100%;
+          .tran;
+        }
+        .text {
+          position: relative;
+          z-index: 2;
+          font-size: 1.3rem;
+          color: white;
+          height: 100%;
+          box-sizing: border-box;
+          padding: 1.5rem 2rem;
+          line-height: 2rem;
+          background-color: rgba(0,0,0,0.5);
+          min-height: 20rem;
+          .tran;
+          
+        }
+        &:hover {
+          .text {
+            //background-color: rgba(0,0,0,0.8);
+            
+          }
+          img {
+            -webkit-filter: grayscale(1);
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+          }
+        }
+      }
+    }
+  }
+}

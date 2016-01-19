@@ -1,0 +1,40 @@
+section.breadCrumbs {
+  width: 100%;
+  background-color: white;
+  border-bottom: 2px solid @green;
+  .row {
+    width: 100%;
+    
+    .item {
+      color: @green;
+      font-size: 1rem;
+      display: inline-block;
+      padding: 10px;
+      vertical-align: top;
+      position: relative;
+      &.curr {
+        color: black;
+      }
+      a {
+        .clearLink;
+        .tran;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      &:after {
+        content: "/";
+        display: block;
+        position: absolute;
+        right: -5px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}

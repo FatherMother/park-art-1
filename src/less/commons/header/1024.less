@@ -1,0 +1,69 @@
+header {
+  &.hide {
+    margin-top: -@headerHeight;
+  }
+  .tran;
+  width: 100%;
+  @media only screen and (min-device-width: 1024px) {
+    .row {
+      min-width: 1024px;
+      max-width: 1280px;
+      margin: auto;
+      .col {
+        vertical-align: middle;
+        &.logo,
+        &.adress,
+        &.schedule,
+        &.phone,
+        &.btn-order {
+          display: inline-block;
+          float: none;
+          width: auto;
+          font-size: 0.9rem;
+          line-height: 1.1rem;
+          height: @headerHeight;
+        }
+        
+        &.logo {
+          width: 15.8rem;
+        }
+        &.adress {
+          margin-left: 1rem;
+          width: 12.2rem;
+          i.mark-icon {
+            height: 100%;
+          }
+        }
+        &.schedule {
+          margin-left: 1rem;
+          width: 12.3rem;
+          i.clock-icon {
+            height: 100%;
+          }
+        }
+        &.phone {
+          margin-left: 1rem;
+          margin-top: 0;
+          width: 10.1rem;
+          font-size: 1.1rem;
+          height: @headerHeight / 2;
+          line-height: @headerHeight / 2;
+        }
+        &.btn-order {
+          height: auto;
+          font-size: .9rem;
+          color: @green;
+          margin-left: 1rem;
+          margin-top: 0;
+          .tran;
+          &:hover {
+            background-color: @green;
+            color: white;
+          }
+        }
+        
+      }
+    
+    }
+  }
+}

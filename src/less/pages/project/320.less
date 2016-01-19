@@ -1,0 +1,80 @@
+section.project {
+  .row {
+    
+    .col {
+      
+      display: inline-block;
+      vertical-align: top;
+      width: 100%;
+        
+      &.description {
+        h2 {
+          &:before {
+            display: none;
+          }
+        }
+        p {
+          font-size: 1rem;
+          box-sizing: border-box;
+          padding: .5rem 1rem;
+        }
+      }
+      
+      &.image {
+        .img {
+          text-align: center;
+          img {
+            width: 90%;
+            
+          }
+        }
+        .btn {
+          display: none;
+          i {
+            
+          }
+          span {
+            
+          }
+        }
+      }
+      
+      &.params {
+        margin-top: 2rem;
+        table {
+          width: 100%;
+          thead {
+            tr {
+              background-color: white;
+              th {
+                text-align: center;
+                color: #59932c;
+                text-transform: uppercase;
+                font-size: 1rem;
+                //padding-bottom: 1rem;
+              }
+            }
+          }
+          tbody {
+            tr {
+              width: 100%;
+              &:nth-child(odd) {
+                background-color: @green;
+                color: white;
+              }
+              &:nth-child(even) {
+                background-color: white;
+                color: @green;
+              }
+              td {
+                padding: 5px 10px;
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+      
+    }
+  }
+}

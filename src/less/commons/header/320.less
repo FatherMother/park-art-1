@@ -1,0 +1,126 @@
+header {
+  background: white;
+  .row {
+    width: 100%;
+    text-align: center;
+    .col {
+      display: block;
+      width: 100%;
+      &.logo {
+        * {
+          margin: 0;
+          padding: 0;
+          
+        }
+        a {
+          .clearLink;
+          display: block;
+          float: left;
+          width: 80%;
+          img {
+            width: 100%;
+          }
+        }
+        a.menu {
+          width: 20%;
+          display: block;
+          float: left;
+          text-align: center;
+          img {
+            width: 80%;
+          }
+        }
+      }
+      &.adress {
+        text-align: center;
+        margin: 20px 0;
+        * {
+          vertical-align: middle;
+          
+        }
+        i {
+          &.mark-icon {
+            display: inline-block;
+            width: 29px;
+            height: 39px;
+            background: url("@{IMG_PATH}addres.png") no-repeat center;
+            background-size: 100%;
+            
+            margin-right: 10px;
+          }
+        }
+        font-size: 20px;
+        ul {
+          list-style-type: none;
+          display: inline-block;
+          font-size: inherit;
+          li {
+            font-size: inherit;
+            a {
+              .clearLink;
+              font-size: inherit;
+            }
+          }
+        }
+      }
+      &.schedule {
+        text-align: center;
+        margin: 20px 0;
+        * {
+          vertical-align: middle;
+          
+        }
+        i {
+          &.clock-icon {
+            display: inline-block;
+            width: 29px;
+            height: 29px;
+            background: url("@{IMG_PATH}clock.png") no-repeat center;
+            background-size: 100%;
+            
+            margin-right: 10px;
+          }
+        }
+        font-size: 20px;
+        ul {
+          list-style-type: none;
+          display: inline-block;
+          font-size: inherit;
+          li {
+            font-size: inherit;
+            a {
+              .clearLink;
+              font-size: inherit;
+            }
+          }
+        }
+      }
+      &.phone {
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        .clearLink;
+        font-weight: bold;
+      }
+      &.btn-order {
+        display: inline-block;
+        text-align: center;
+        margin: 20px auto;
+        .clearLink;
+        color: @green;
+        &:active,
+        &:visited,
+        &:focus {
+          color: @green;
+        }
+        border: 2px solid @green;
+        font-size: 25px;
+        width: auto;
+        padding: 5px 15px;
+      }
+      &:after {
+        .clear;
+      }
+    }
+  }
+}

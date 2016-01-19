@@ -1,0 +1,216 @@
+section.h1 {
+  @media only screen and (min-device-width: 1024px) {
+    width: 100%;
+    min-width: 100%;
+    height: 100vh;
+    position: relative;
+    background: none;
+    h1 {
+      position: absolute;
+      transform: translateY(-45%) translateX(-50%);
+      top: 50%;
+      left: 50%;
+      padding-top: 0;
+      z-index: 3;
+      width: auto;
+      span {
+        transition: 1.5s ease-in;
+        margin: 0;
+        &:nth-of-type(1) {
+          margin-bottom: 2rem;
+          &.hide {
+            transform: translateY(50px);
+            opacity: 0;
+          }
+          &.up {
+            transform: translateY(-150px);
+            transition: 1.5s ease-out;
+          }
+        }
+        &:nth-of-type(2) {
+          margin-top: 3rem;
+          &.hide {
+            transform: translateY(-50px);
+            opacity: 0;
+          }
+          &.up {
+            transform: translateY(150px);
+            transition: 1.5s ease-out;
+          }
+        }
+        
+      }
+    }
+  
+    @cubeCount: 16; 
+    @cubeCountX2: @cubeCount * 2;
+    
+    @cubeWidth: 4.047rem;
+    @halfWidth: @cubeWidth / 2;
+    &:after {
+      .clear;
+    }
+    .cubes {
+      overflow: hidden;
+      width: auto;
+      height: auto;
+      
+      .cube-wrapper {
+        width: @cubeWidth;
+        height: @cubeWidth;
+        position: relative;
+        float: left;
+        perspective: 100px;
+        perspective-origin: 50%;
+        box-sizing: border-box;
+        font-size: 0px;
+        .cube {
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          transform-style: preserve-3d;
+          transform-origin: 50% 50% calc(-100vw / 40);
+          transition: 2s cubic-bezier(.75,.1,0,1);
+          &:after,
+          &:before,
+          span {
+            display: block;
+            transform-origin: 50% 50% calc(-100vw / 40);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: "";
+            top: 0;
+            left: 0;
+			backface-visibility: hidden;
+          }
+          &:after {
+            
+          }
+          &:before {
+
+          }
+          
+          @iterations: 25;
+          .loopingClass (@index) when (@index > 0) {
+            &.bg-@{index} { 
+              &:after {
+                background: url("@{IMG_PATH}cube/@{index}.png") no-repeat center;
+                background-size: 100%;          
+              }
+              &:before {
+                @indexTwo: -1 * (@index - 26);
+                background: url("@{IMG_PATH}cube/@{indexTwo}.png") no-repeat center;
+                background-size: 100%;          
+              }          
+            }
+            .loopingClass(@index - 1);
+          }
+          .loopingClass (@iterations);
+          
+          @iterations2: 200;
+          .loopingClass2 (@index2) when (@index2 > 0) {
+            &.img-@{index2} {
+              span {
+                background: url("@{IMG_PATH}slider/1/img_@{index2}.jpg");
+                background-size: 100%;
+              }
+            }
+            .loopingClass2(@index2 - 1);
+          }
+          .loopingClass2 (@iterations2);
+          
+          &.animate-1 {
+            transform: rotateY(0deg);
+            &:before {
+              transform: rotateY(-90deg);
+              z-index: 1;
+            }
+            span {
+              transform: rotateY(90deg);
+              z-index: 1;
+            }
+            &.done,
+            &:hover  {
+              transform: rotateY(90deg);
+            }
+            &.slider {
+              transform: rotateY(-90deg);
+              &:hover {
+                transform: rotateY(-90deg);
+              }
+            }
+          }
+          &.animate-2 {
+            transform: rotateY(0deg);
+            &:before {
+              transform: rotateY(90deg);
+              z-index: 1;
+            }
+            span {
+              transform: rotateY(-90deg);
+              z-index: 1;
+            }
+            &.slider {
+              transform: rotateY(90deg);
+              &:hover {
+                transform: rotateY(90deg);
+              }
+            }
+            &.done,
+            &:hover {
+              transform: rotateY(-90deg);
+              
+            }
+          }
+          &.animate-3 {
+            transform: rotateX(0deg);
+            &:before {
+              transform: rotateX(-90deg);
+              z-index: 1;
+            }
+            &.done,
+            &:hover  {
+              transform: rotateX(90deg);
+            }
+            &.slider {
+              transform: rotateX(-90deg);
+              &:hover {
+                transform: rotateX(-90deg);
+              }
+            }
+            span {
+              transform: rotateX(90deg);
+              z-index: 1;
+            }
+          }
+          &.animate-4 {
+            transform: rotateX(0deg);
+            &:before {
+              transform: rotateX(90deg);
+              z-index: 1;
+            }
+            &.done,
+            &:hover {
+              transform: rotateX(-90deg);
+            }
+            &.slider {
+              transform: rotateX(90deg);
+              &:hover {
+                transform: rotateX(90deg);
+              }
+            }
+            span {
+              transform: rotateX(-90deg);
+              z-index: 1;
+            }
+          }
+
+          
+          
+        }
+      }
+    }
+  }
+}

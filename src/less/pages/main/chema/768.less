@@ -1,0 +1,51 @@
+section.chema {
+  @media only screen and (min-device-width: 768px) {
+   .row {
+      max-width: 990px;
+      margin: 2rem auto;
+      margin-bottom: 5rem;
+      .col {
+        width: 50%;
+        float: left;
+        
+        h3 {
+          font-size: 1.4rem;
+          color: @green;
+          text-decoration: underline;
+        }
+        p {
+          font-size: 1.3rem;
+          color: @green;
+          text-decoration: underline;
+        }
+      
+        &.one {
+          position: relative;
+          &:after {
+            display: block;
+            position: absolute;
+            background-color: @green;
+            width: 1px;
+            height: 100%;
+            top: 0;
+            right: 0;
+            content: "";
+          }
+          
+        }
+        &.two {
+          p {
+            padding-left: 2rem;
+          }
+          h3 {
+            padding-left: 2rem;
+          }
+        }
+      
+      }
+      &:after {
+        .clear;
+      }
+    }
+  }
+}

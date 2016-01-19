@@ -1,0 +1,77 @@
+section.adress-map {
+  width: 100%;
+  .row {
+    width: 100%;
+    .col {
+      display: block;
+      width: 100%;
+      &.adress {
+        
+        .item {
+          position: relative;
+          margin-top: 3rem;
+          ul {
+            padding-top: 3rem;
+            li {
+              text-align: center;
+              img {
+                display: none;
+                &.mobile {
+                  display: inline-block;
+                  width: 90%;
+                  max-width: 450px;
+                }
+              }
+              p {
+                position: relative;
+                font-size: 1rem;
+                line-height: 1.2rem;
+              }
+            }
+          }
+          p {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 1.4rem;
+            width: 100%;
+            text-align: center;
+            height: 3rem;
+            line-height: 3rem;
+          }
+        }
+      }
+      
+      &.ma {
+        display: none;
+        .map {}
+      }
+      
+    }
+  }
+}
+
+section.employers {
+  width: 100%;
+  ul {
+    width: 100%;
+    &.list {
+      li {
+        display: block;
+        text-align: center;
+        margin-top: 2rem;
+        img {
+          max-width: 450px;
+        }
+        p {
+          &.name {
+            font-size: 1rem;
+          }
+          &.status {
+            font-size: .8rem;
+          }
+        }
+      }
+    }
+  }
+}

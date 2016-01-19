@@ -1,0 +1,30 @@
+.new-font(@fontname, @filename, @svg: 0, @weight: normal) when (@svg = 0) {
+  @font-face {
+    font-family: @fontname;
+    font-weight: @weight;
+    font-style: normal;
+
+    src: url('@{fontFolder}@{filename}.eot');
+    src: url('@{fontFolder}@{filename}.eot?#iefix') format('embedded-opentype'),
+    url('@{fontFolder}@{filename}.woff') format('woff'),
+    url('@{fontFolder}@{filename}.ttf') format('truetype'),
+    url('@{fontFolder}@{filename}.svg#@{fontname}') format('svg');
+  }
+}
+
+.new-font(@fontname, @filename, @svg: 0, @weight: normal) when (@svg = 1) {
+  @font-face {
+    font-family: @fontname;
+    font-weight: @weight;
+    font-style: normal;
+
+    src: url('@{fontFolder}@{filename}.eot');
+    src: url('@{fontFolder}@{filename}.eot?#iefix') format('embedded-opentype'),
+    url('@{fontFolder}@{filename}.svg#@{fontname}') format('svg'),
+    url('@{fontFolder}@{filename}.woff') format('woff'),
+    url('@{fontFolder}@{filename}.ttf') format('truetype');
+  }
+}
+
+.new-font('Trebuchet', 'Trebuchet-MS-Regular_', 0);
+.new-font('Trebuchet', 'Trebuchet-MS-Bold__', 0, 900);

@@ -1,0 +1,132 @@
+section.adress-map {
+  @media only screen and (min-device-width: 768px) {
+    .row {
+      width: 100%;
+      max-width: 1024px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 7rem;
+      font-size: 0;
+      .col {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        &.adress {
+          .item {
+            width: 100%;
+            height: 18rem;
+            display: block;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: 2px solid @green;
+            cursor: pointer;
+            ul {
+              width: 100%;
+              padding: 0;
+              li {
+                width: 50%;
+                display: inline-block;
+                vertical-align: bottom;
+                img {
+                  display: block;
+                  width: 100%;
+                  width: 15rem;
+                  border: 1px solid @green;
+                  margin: 2rem 0 0 2rem;
+                  padding: 0;
+                  &.mobile {
+                    display: none;
+                  }
+                }
+                p {
+                  height: auto;
+                  text-align: left;
+                  color: @green;
+                  font-size: 1.2rem;
+                  line-height: 1.4rem;
+                  font-weight: normal;
+                  padding: 0;
+                }
+              }
+            }
+            p {
+              position: relative;
+              display: block;
+              width: 100%;
+              text-align: center;
+              color: @green;
+              font-size: 2rem;
+              font-weight: bold;
+              padding: 2rem 0;
+            }
+            
+            &:nth-child(1) {
+              border-bottom: 1px solid @green;
+              border-top: 0px solid @green;
+              &.active {
+                border: 2px solid @orange;
+                border-bottom: 1px solid @orange;
+                border-top: 0px solid @orange;
+              }
+            }
+            &:nth-child(2) {
+              border-top: 1px solid @orange;
+              &.active {
+                border: 2px solid @orange;
+                border-top: 1px solid @orange;
+              }
+            }
+            
+          }
+        }
+        
+              
+        &.ma {
+          display: inline-block;
+          height: 36rem;
+          .map {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+
+section.employers {
+  @media only screen and (min-device-width: 768px) {
+    width: 100%;
+    ul {
+      width: 100%;
+      &.list {
+        text-align: center;
+        li {
+          display: inline-block;
+          text-align: center;
+          margin-top: 2rem;
+          margin-left: 1rem;
+          margin-right: 1rem;
+          img {
+            max-width: auto;
+            width: 15rem;
+          }
+          p {
+            &.name {
+              font-size: 1.5rem;
+              color: @green;
+              font-weight: bold;
+            }
+            &.status {
+              font-size: 1rem;
+              color: @green;
+            }
+          }
+        }
+      }
+    }
+  }
+}

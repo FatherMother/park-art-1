@@ -1,0 +1,97 @@
+section.feedback-main {
+  @media only screen and (min-device-width: 768px) {
+    .row {
+      margin: 3rem auto;
+      font-size: 0;
+      max-width: 1024px;
+      .col {
+        display: inline-block;
+        vertical-align: middle;
+        width: 50%;
+        &.one {
+          position: relative;
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 2px;
+            background-color: @green;
+            height: 80%;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+          }
+          h3 {
+            font-size: 1.5rem;
+            color: @green;
+          }
+          p {
+            font-size: 1.2rem;
+            color: @green;
+            text-align: center;
+            padding: .4rem 4rem;
+            box-sizing: border-box;
+          }
+          a.btn {
+            font-size: 1.2rem;
+          }
+        }
+        &.two {
+          display: inline-block;
+          .pic {
+            width: 100%;
+            height: 20rem;
+            margin: 1rem 0;
+            box-sizing: border-box;
+            padding-right: 1rem;
+            .img {
+              position: relative;
+              height: 100%;
+              display: inline-block;
+              img {
+                height: 100%;
+              }
+              p {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                color: white;
+                background-color: @green;
+                z-index: 2;
+                font-size: 1.2rem;
+                padding: 1rem 0 ;
+              }
+            }
+          }
+        }
+      }
+      &:after {
+        .clear;
+      }
+    }
+    .text {
+      padding: 0 2rem;
+      box-sizing: border-box;
+      img {
+        float: left;
+        display: block;
+        margin-right: 2rem;
+        width: 20rem;
+      }
+      p {
+        
+        font-size: 1.2rem;
+        text-align: left;
+        padding: 0;
+        padding-bottom: 2rem;
+        display: block;
+        width: auto;
+        color: @green;
+      }
+      &:after {
+        .clear;
+      }
+    }
+  }
+}

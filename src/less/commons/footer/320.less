@@ -1,0 +1,43 @@
+footer {
+  width: 100%;
+  background: url("@{IMG_PATH}footer-bg.png") repeat-x bottom;
+  .row {
+    width: 100%;
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+    
+    text-align: center;
+    font-size: 0;
+    .col {
+      display: inline-block;
+      width: 100%;
+      
+      &.links-list {
+        font-size: 1rem;
+        color: @green;
+        ul {
+          li {
+            margin: .5rem 0;
+            a {
+              color: @green;
+              &:active,
+              &:focus,
+              &:visited {
+                color: @green;
+              }
+            }
+          }
+        }
+      }
+      
+      &.simple-info {
+        display: none;
+      }
+      
+      &.same-shits {
+        display: none;
+      }
+      
+    }
+  }
+}

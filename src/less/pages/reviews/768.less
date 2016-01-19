@@ -1,0 +1,54 @@
+section.reviews {
+  @media only screen and (min-device-width: 768px) {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    .line {
+      position: absolute;
+      display: block;
+      width: 2px;
+      height: 50%;
+      background-color: @green;
+      left: 50%;
+      top: 25%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+    .row {
+      margin-top: 8rem;
+      text-align: center;
+      font-size: 0;
+      .col {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 50%;
+        &.text {
+          padding: 0 5rem 0 4rem;
+          box-sizing: border-box;
+          h2 {
+          }
+          p {
+            font-size: 1.3rem;
+            padding: .5rem 0;
+          }
+        }
+        &.imgs {
+          padding: 0 4rem 0 5rem;
+          box-sizing: border-box;
+          .image {
+            img {
+              max-width: auto;
+              width: 100%;
+            }
+            p {
+              font-size: 1.2rem;
+              padding: .5rem 0;
+              color: white;
+              background-color: @green;
+            }
+          }
+        }
+      }
+    }
+  }
+}

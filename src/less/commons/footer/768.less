@@ -1,0 +1,73 @@
+footer {
+  @media only screen and (min-device-width: 768px) {
+    width: 100%;
+    .row {
+      width: 100%;
+      max-width: 1024px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5rem;
+      padding-bottom: 6rem;
+      text-align: center;
+      font-size: 0;
+      .col {
+        display: inline-block;
+        width: auto;
+        
+        &.links-list {
+          font-size: 1rem;
+          color: @green;
+          width: 15rem;
+          vertical-align: top;
+          ul {
+            text-align: left;
+            li {
+              margin: .5rem 0;
+              position: relative;
+              vertical-align: top;
+              &:before {
+                content: "";
+                display: block;
+                width: 2px;
+                height: 2px;
+                background-color: @green;
+                border-radius: 50%;
+                position: absolute;
+                left: -10px;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+              a {
+                color: @green;
+                &:active,
+                &:focus,
+                &:visited {
+                  color: @green;
+                }
+              }
+            }
+          }
+        }
+        
+        &.simple-info {
+          font-size: 1rem;
+          display: inline-block;
+          vertical-align: bottom;
+          color: @green;
+          width: 20rem;
+        }
+        
+        &.same-shits {
+          font-size: 1rem;
+          display: inline-block;
+          vertical-align: bottom;
+          width: 25rem;
+          * {
+            //float: right;
+          }
+        }
+        
+      }
+    }
+  }
+}
